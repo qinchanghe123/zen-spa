@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Zen Spa | Quiet Massage & Relaxation in La Mirada, CA</title>
+  <title>Zen Spa | Quiet Relaxation in La Mirada, CA</title>
+
   <meta
     name="description"
     content="Zen Spa offers a quiet, private and thoughtfully prepared relaxation experience near Leffingwell Road in La Mirada, California."
   />
-  <meta name="theme-color" content="#f3eadc" />
+
+  <meta name="theme-color" content="#f5eee2" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet"
@@ -20,34 +23,32 @@
 
   <style>
     /* =========================================================
-       1. WARM BEIGE DESIGN SYSTEM
+       1. DESIGN SYSTEM
     ========================================================= */
     :root {
-      --brown-950: #35291f;
-      --brown-900: #46382c;
-      --brown-800: #5c4939;
-      --brown-700: #78614d;
-      --brown-600: #92775e;
+      --brown-950: #382c22;
+      --brown-900: #49392d;
+      --brown-800: #5f4b3b;
+      --brown-700: #77614f;
+      --brown-600: #947b67;
 
-      --beige-50: #fffdf8;
-      --beige-100: #faf5ec;
+      --beige-50: #fffdf9;
+      --beige-100: #fbf6ee;
       --beige-150: #f7f0e5;
-      --beige-200: #f2e8d9;
-      --beige-300: #e8dac6;
-      --beige-400: #dac6aa;
-      --beige-500: #c8aa82;
+      --beige-200: #f2e8da;
+      --beige-300: #e9dac6;
+      --beige-400: #dac4a7;
 
-      --champagne: #c69b62;
-      --champagne-dark: #a97b45;
-      --champagne-light: #e8cda6;
+      --champagne: #c59b64;
+      --champagne-dark: #a97945;
+      --champagne-light: #ead1ac;
       --rose-beige: #c98f72;
 
       --text: #4a3b2f;
       --text-soft: #756456;
-      --white: #ffffff;
 
-      --border: rgba(92, 73, 57, 0.14);
-      --border-strong: rgba(92, 73, 57, 0.22);
+      --border: rgba(95, 75, 59, 0.14);
+      --border-strong: rgba(95, 75, 59, 0.22);
 
       --shadow-soft: 0 22px 60px rgba(101, 78, 55, 0.1);
       --shadow-medium: 0 30px 80px rgba(101, 78, 55, 0.16);
@@ -115,7 +116,9 @@
     h1,
     h2,
     h3,
-    p {
+    p,
+    figure,
+    blockquote {
       margin-top: 0;
     }
 
@@ -227,7 +230,7 @@
     .button-outline {
       color: var(--brown-900);
       border-color: rgba(70, 56, 44, 0.25);
-      background: rgba(255, 253, 248, 0.55);
+      background: rgba(255, 253, 248, 0.62);
       backdrop-filter: blur(12px);
     }
 
@@ -277,7 +280,7 @@
     }
 
     .site-header.scrolled {
-      background: rgba(250, 245, 236, 0.91);
+      background: rgba(250, 245, 236, 0.92);
       box-shadow: 0 12px 36px rgba(101, 78, 55, 0.1);
       backdrop-filter: blur(20px);
     }
@@ -345,7 +348,7 @@
       gap: clamp(16px, 2.2vw, 34px);
     }
 
-    .desktop-nav a:not(.nav-cta) {
+    .desktop-nav a {
       position: relative;
       color: var(--brown-800);
       font-size: 0.76rem;
@@ -353,7 +356,7 @@
       letter-spacing: 0.05em;
     }
 
-    .desktop-nav a:not(.nav-cta)::after {
+    .desktop-nav a::after {
       position: absolute;
       right: 0;
       bottom: -9px;
@@ -366,34 +369,10 @@
       transition: transform 240ms ease;
     }
 
-    .desktop-nav a:not(.nav-cta):hover::after,
-    .desktop-nav a:not(.nav-cta).active::after {
+    .desktop-nav a:hover::after,
+    .desktop-nav a.active::after {
       transform: scaleX(1);
       transform-origin: left;
-    }
-
-    .nav-cta {
-      display: inline-flex;
-      min-height: 44px;
-      align-items: center;
-      padding: 10px 18px;
-      color: var(--brown-950);
-      border-radius: var(--radius-pill);
-      background: linear-gradient(
-        135deg,
-        var(--champagne-light),
-        var(--champagne)
-      );
-      box-shadow: 0 10px 28px rgba(169, 123, 69, 0.18);
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: transform 200ms ease;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-2px);
     }
 
     .menu-toggle {
@@ -484,23 +463,6 @@
       color: var(--brown-950);
       font-family: var(--font-display);
       font-size: clamp(2rem, 10vw, 3.2rem);
-    }
-
-    .mobile-nav .mobile-book {
-      margin-top: 24px;
-      padding: 16px;
-      color: var(--brown-950);
-      border-radius: var(--radius-pill);
-      background: linear-gradient(
-        135deg,
-        var(--champagne-light),
-        var(--champagne)
-      );
-      font-family: var(--font-body);
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
     }
 
     /* =========================================================
@@ -735,9 +697,9 @@
       position: relative;
       z-index: 5;
       color: var(--brown-900);
-      background: var(--beige-300);
       border-top: 1px solid rgba(92, 73, 57, 0.08);
       border-bottom: 1px solid rgba(92, 73, 57, 0.1);
+      background: var(--beige-300);
     }
 
     .intro-grid {
@@ -1028,19 +990,12 @@
     }
 
     /* =========================================================
-       7. SERVICES & PRICING
+       7. SERVICES
     ========================================================= */
     .services {
       background:
-        linear-gradient(
-          rgba(92, 73, 57, 0.03) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(92, 73, 57, 0.03) 1px,
-          transparent 1px
-        ),
+        linear-gradient(rgba(92, 73, 57, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(92, 73, 57, 0.03) 1px, transparent 1px),
         var(--beige-150);
       background-size: 46px 46px;
     }
@@ -1148,7 +1103,7 @@
       color: var(--brown-900);
       border: 1px solid rgba(92, 73, 57, 0.16);
       border-radius: 50%;
-      background: rgba(250, 245, 236, 0.76);
+      background: rgba(250, 245, 236, 0.8);
       backdrop-filter: blur(10px);
       transition: background 200ms ease;
     }
@@ -1237,7 +1192,7 @@
       font-weight: 600;
     }
 
-    .service-book {
+    .service-select {
       display: inline-flex;
       align-items: center;
       gap: 9px;
@@ -1248,13 +1203,13 @@
       text-transform: uppercase;
     }
 
-    .service-book svg {
+    .service-select svg {
       width: 17px;
       height: 17px;
       transition: transform 200ms ease;
     }
 
-    .service-book:hover svg {
+    .service-select:hover svg {
       transform: translateX(4px);
     }
 
@@ -1355,9 +1310,9 @@
     }
 
     /* =========================================================
-       9. BOOKING
+       9. RESERVATION
     ========================================================= */
-    .booking {
+    .reservation {
       overflow: hidden;
       background:
         radial-gradient(
@@ -1368,29 +1323,29 @@
         var(--beige-100);
     }
 
-    .booking-layout {
+    .reservation-layout {
       display: grid;
       grid-template-columns: 0.8fr 1.2fr;
       gap: clamp(45px, 8vw, 105px);
     }
 
-    .booking-intro {
+    .reservation-intro {
       position: sticky;
       top: calc(var(--header-height) + 40px);
       align-self: start;
     }
 
-    .booking-intro .section-heading {
+    .reservation-intro .section-heading {
       font-size: clamp(3rem, 5.5vw, 5.5rem);
     }
 
-    .booking-contact-list {
+    .reservation-contact-list {
       display: grid;
       gap: 13px;
       margin-top: 36px;
     }
 
-    .booking-contact {
+    .reservation-contact {
       display: flex;
       align-items: center;
       gap: 15px;
@@ -1398,7 +1353,7 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .booking-contact-icon {
+    .reservation-contact-icon {
       display: grid;
       width: 42px;
       height: 42px;
@@ -1410,12 +1365,12 @@
       background: rgba(255, 253, 248, 0.58);
     }
 
-    .booking-contact-icon svg {
+    .reservation-contact-icon svg {
       width: 18px;
       height: 18px;
     }
 
-    .booking-contact small {
+    .reservation-contact small {
       display: block;
       margin-bottom: 2px;
       color: var(--brown-600);
@@ -1425,14 +1380,14 @@
       text-transform: uppercase;
     }
 
-    .booking-contact strong {
+    .reservation-contact strong {
       color: var(--brown-900);
       font-family: var(--font-display);
       font-size: 1.25rem;
       font-weight: 600;
     }
 
-    .booking-form-shell {
+    .reservation-form-shell {
       position: relative;
       padding: clamp(30px, 5vw, 58px);
       border: 1px solid var(--border);
@@ -1502,7 +1457,7 @@
       resize: vertical;
     }
 
-    .booking-form-footer {
+    .reservation-form-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1623,7 +1578,7 @@
     }
 
     .review-card blockquote {
-      margin: 0 0 24px;
+      margin-bottom: 24px;
       color: var(--brown-800);
       font-family: var(--font-display);
       font-size: 1.35rem;
@@ -1867,8 +1822,8 @@
     ========================================================= */
     .site-footer {
       color: var(--brown-900);
-      background: var(--beige-300);
       border-top: 1px solid var(--border);
+      background: var(--beige-300);
     }
 
     .footer-main {
@@ -1927,7 +1882,7 @@
     }
 
     /* =========================================================
-       14. RESPONSIVE
+       14. TABLET
     ========================================================= */
     @media (max-width: 1080px) {
       :root {
@@ -1974,12 +1929,12 @@
         border-top: 1px solid var(--border);
       }
 
-      .booking-layout,
+      .reservation-layout,
       .faq-layout {
         grid-template-columns: 1fr;
       }
 
-      .booking-intro,
+      .reservation-intro,
       .faq-heading-wrap {
         position: static;
       }
@@ -1999,6 +1954,9 @@
       }
     }
 
+    /* =========================================================
+       15. MOBILE
+    ========================================================= */
     @media (max-width: 760px) {
       .container {
         width: min(calc(100% - 28px), var(--container));
@@ -2213,12 +2171,12 @@
         grid-column: auto;
       }
 
-      .booking-form-footer {
+      .reservation-form-footer {
         align-items: stretch;
         flex-direction: column;
       }
 
-      .booking-form-footer .button {
+      .reservation-form-footer .button {
         width: 100%;
       }
 
@@ -2302,10 +2260,14 @@
 </head>
 
 <body>
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
   <header class="site-header" id="siteHeader">
     <div class="nav-shell">
       <a class="brand" href="#home" aria-label="Zen Spa home">
         <span class="brand-mark" aria-hidden="true">ZS</span>
+
         <span class="brand-text">
           <span class="brand-name">Zen Spa</span>
           <span class="brand-subtitle">La Mirada, California</span>
@@ -2320,7 +2282,6 @@
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a class="nav-cta" href="#booking">Book Now</a>
       </nav>
 
       <button
@@ -2345,12 +2306,13 @@
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
-      <a class="mobile-book" href="#booking">Book Your Visit</a>
     </div>
   </nav>
 
   <main>
-    <!-- HERO -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
     <section class="hero" id="home" aria-label="Zen Spa introduction">
       <div class="hero-slides" aria-hidden="true">
         <div
@@ -2387,22 +2349,18 @@
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#booking">
-              Book Now
+            <a class="button button-primary" href="tel:+16264927053">
+              Call 626-492-7053
+
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
-                  d="M5 12h14M13 6l6 6-6 6"
+                  d="M7 4h3l1.2 4-2 1.5a14 14 0 0 0 5.3 5.3l1.5-2L20 14v3c0 1.7-1.3 3-3 3C9.8 20 4 14.2 4 7c0-1.7 1.3-3 3-3Z"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
+                  stroke-width="1.5"
                   stroke-linejoin="round"
                 />
               </svg>
-            </a>
-
-            <a class="button button-outline" href="tel:+16264927053">
-              Call 626-492-7053
             </a>
           </div>
 
@@ -2423,7 +2381,7 @@
             </div>
 
             <div class="trust-item">
-              <strong>Easy Booking</strong>
+              <strong>Easy Scheduling</strong>
               <span>Call to reserve</span>
             </div>
           </div>
@@ -2431,15 +2389,31 @@
       </div>
 
       <div class="hero-controls" aria-label="Hero image controls">
-        <button class="hero-dot active" type="button" aria-label="Show image 1"></button>
-        <button class="hero-dot" type="button" aria-label="Show image 2"></button>
-        <button class="hero-dot" type="button" aria-label="Show image 3"></button>
+        <button
+          class="hero-dot active"
+          type="button"
+          aria-label="Show image 1"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show image 2"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          aria-label="Show image 3"
+        ></button>
       </div>
 
       <div class="scroll-cue" aria-hidden="true">Discover</div>
     </section>
 
-    <!-- INFORMATION -->
+    <!-- =====================================================
+         INFORMATION STRIP
+    ====================================================== -->
     <section class="intro-strip" aria-label="Quick information">
       <div class="container intro-grid">
         <div class="intro-lead">
@@ -2463,7 +2437,9 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
     <section class="section about" id="about">
       <div class="container about-layout">
         <div class="about-copy reveal">
@@ -2489,6 +2465,7 @@
             <article class="about-highlight">
               <span class="highlight-number">01</span>
               <h3>Quiet Setting</h3>
+
               <p>
                 A subdued atmosphere that supports a more peaceful and
                 uninterrupted visit.
@@ -2498,6 +2475,7 @@
             <article class="about-highlight">
               <span class="highlight-number">02</span>
               <h3>Private Comfort</h3>
+
               <p>
                 Thoughtfully arranged spaces that respect personal comfort and
                 discretion.
@@ -2507,6 +2485,7 @@
             <article class="about-highlight">
               <span class="highlight-number">03</span>
               <h3>Clean Details</h3>
+
               <p>
                 A tidy, carefully maintained environment with comfort at the
                 center of the experience.
@@ -2519,7 +2498,7 @@
           <div class="about-image-main">
             <img
               src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=88"
-              alt="Quiet, softly lit spa setting"
+              alt="Quiet and softly lit spa setting"
               loading="lazy"
             />
           </div>
@@ -2539,12 +2518,15 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
     <section class="section experience" id="experience">
       <div class="container">
         <div class="experience-header reveal">
           <div>
             <div class="section-kicker">The Zen Spa Experience</div>
+
             <h2 class="section-heading">
               A slower rhythm from arrival to finish.
             </h2>
@@ -2571,8 +2553,10 @@
                 />
               </svg>
             </div>
+
             <span class="experience-step">Step 01</span>
             <h3>Calm Arrival</h3>
+
             <p>
               Arrive with time to settle in, confirm your session and leave the
               pace of the day at the door.
@@ -2591,8 +2575,10 @@
                 />
               </svg>
             </div>
+
             <span class="experience-step">Step 02</span>
             <h3>Private Space</h3>
+
             <p>
               Enjoy an environment arranged for discretion, quiet and personal
               ease throughout your visit.
@@ -2611,8 +2597,10 @@
                 />
               </svg>
             </div>
+
             <span class="experience-step">Step 03</span>
             <h3>Mindful Details</h3>
+
             <p>
               Soft lighting, a clean setting and an uncluttered atmosphere
               support a more comfortable experience.
@@ -2631,8 +2619,10 @@
                 />
               </svg>
             </div>
+
             <span class="experience-step">Step 04</span>
             <h3>Restful Finish</h3>
+
             <p>
               Take a moment before returning to your day, allowing the visit to
               end without feeling rushed.
@@ -2642,13 +2632,18 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- =====================================================
+         SERVICES AND PRICING
+    ====================================================== -->
     <section class="section services" id="services">
       <div class="container">
         <div class="services-header reveal">
           <div>
             <div class="section-kicker">Sessions & Pricing</div>
-            <h2 class="section-heading">Choose the time that fits your day.</h2>
+
+            <h2 class="section-heading">
+              Choose the time that fits your day.
+            </h2>
           </div>
 
           <div class="price-note">
@@ -2658,6 +2653,7 @@
         </div>
 
         <div class="service-grid">
+          <!-- 30 MINUTES -->
           <article class="service-card reveal">
             <div class="mini-carousel" data-carousel>
               <div class="mini-carousel-slide active">
@@ -2739,11 +2735,12 @@
               </div>
 
               <a
-                class="service-book"
-                href="#booking"
+                class="service-select"
+                href="#reservation"
                 data-session="30-Minute Session — $40"
               >
                 Select this session
+
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M5 12h14M13 6l6 6-6 6"
@@ -2758,6 +2755,7 @@
             </div>
           </article>
 
+          <!-- 45 MINUTES -->
           <article class="service-card reveal">
             <div class="mini-carousel" data-carousel>
               <div class="mini-carousel-slide active">
@@ -2839,11 +2837,12 @@
               </div>
 
               <a
-                class="service-book"
-                href="#booking"
+                class="service-select"
+                href="#reservation"
                 data-session="45-Minute Session — $50"
               >
                 Select this session
+
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M5 12h14M13 6l6 6-6 6"
@@ -2858,6 +2857,7 @@
             </div>
           </article>
 
+          <!-- 60 MINUTES -->
           <article class="service-card reveal">
             <div class="mini-carousel" data-carousel>
               <div class="mini-carousel-slide active">
@@ -2939,11 +2939,12 @@
               </div>
 
               <a
-                class="service-book"
-                href="#booking"
+                class="service-select"
+                href="#reservation"
                 data-session="60-Minute Session — $60"
               >
                 Select this session
+
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M5 12h14M13 6l6 6-6 6"
@@ -2958,6 +2959,7 @@
             </div>
           </article>
 
+          <!-- 90 MINUTES -->
           <article class="service-card reveal">
             <div class="mini-carousel" data-carousel>
               <div class="mini-carousel-slide active">
@@ -3039,11 +3041,12 @@
               </div>
 
               <a
-                class="service-book"
-                href="#booking"
+                class="service-select"
+                href="#reservation"
                 data-session="90-Minute Session — $100"
               >
                 Select this session
+
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M5 12h14M13 6l6 6-6 6"
@@ -3061,13 +3064,18 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
     <section class="section gallery" aria-label="Zen Spa atmosphere">
       <div class="container">
         <div class="gallery-header reveal">
           <div>
             <div class="section-kicker">Atmosphere</div>
-            <h2 class="section-heading">Soft light. Warm detail. Quiet space.</h2>
+
+            <h2 class="section-heading">
+              Soft light. Warm detail. Quiet space.
+            </h2>
           </div>
 
           <p class="section-copy">
@@ -3083,6 +3091,7 @@
               alt="Peaceful spa room with warm lighting"
               loading="lazy"
             />
+
             <figcaption class="gallery-caption">
               <strong>Quiet Surroundings</strong>
               <span>Space to slow down</span>
@@ -3095,6 +3104,7 @@
               alt="Spa towels and calming natural details"
               loading="lazy"
             />
+
             <figcaption class="gallery-caption">
               <strong>Considered Details</strong>
               <span>Simple and refined</span>
@@ -3107,6 +3117,7 @@
               alt="Warm spa setting prepared for relaxation"
               loading="lazy"
             />
+
             <figcaption class="gallery-caption">
               <strong>Warm Comfort</strong>
               <span>A softer atmosphere</span>
@@ -3119,6 +3130,7 @@
               alt="Calm and private wellness environment"
               loading="lazy"
             />
+
             <figcaption class="gallery-caption">
               <strong>Personal Time</strong>
               <span>Rest without distraction</span>
@@ -3128,21 +3140,26 @@
       </div>
     </section>
 
-    <!-- BOOKING -->
-    <section class="section booking" id="booking">
-      <div class="container booking-layout">
-        <div class="booking-intro reveal">
+    <!-- =====================================================
+         RESERVATION
+    ====================================================== -->
+    <section class="section reservation" id="reservation">
+      <div class="container reservation-layout">
+        <div class="reservation-intro reveal">
           <div class="section-kicker">Reservation</div>
-          <h2 class="section-heading">Plan your quiet escape.</h2>
+
+          <h2 class="section-heading">
+            Plan your quiet escape.
+          </h2>
 
           <p class="section-copy">
-            Use the form to prepare your booking request, then call Zen Spa to
-            confirm the appointment and exact location details.
+            Use the form to prepare your reservation request, then call Zen Spa
+            to confirm the appointment and exact location details.
           </p>
 
-          <div class="booking-contact-list">
-            <a class="booking-contact" href="tel:+16264927053">
-              <span class="booking-contact-icon">
+          <div class="reservation-contact-list">
+            <a class="reservation-contact" href="tel:+16264927053">
+              <span class="reservation-contact-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M7 4h3l1.2 4-2 1.5a14 14 0 0 0 5.3 5.3l1.5-2L20 14v3c0 1.7-1.3 3-3 3C9.8 20 4 14.2 4 7c0-1.7 1.3-3 3-3Z"
@@ -3160,8 +3177,8 @@
               </span>
             </a>
 
-            <div class="booking-contact">
-              <span class="booking-contact-icon">
+            <div class="reservation-contact">
+              <span class="reservation-contact-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <circle
                     cx="12"
@@ -3171,6 +3188,7 @@
                     stroke="currentColor"
                     stroke-width="1.5"
                   />
+
                   <path
                     d="M12 8v5l3 2"
                     fill="none"
@@ -3187,8 +3205,8 @@
               </span>
             </div>
 
-            <div class="booking-contact">
-              <span class="booking-contact-icon">
+            <div class="reservation-contact">
+              <span class="reservation-contact-icon">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"
@@ -3197,6 +3215,7 @@
                     stroke-width="1.5"
                     stroke-linejoin="round"
                   />
+
                   <circle
                     cx="12"
                     cy="10"
@@ -3216,18 +3235,19 @@
           </div>
         </div>
 
-        <div class="booking-form-shell reveal">
-          <h3 class="form-heading">Booking Request</h3>
+        <div class="reservation-form-shell reveal">
+          <h3 class="form-heading">Reservation Request</h3>
 
           <p class="form-intro">
             This form prepares a request only. Please call 626-492-7053 to
             confirm your appointment.
           </p>
 
-          <form id="bookingForm">
+          <form id="reservationForm">
             <div class="form-grid">
               <div class="form-group">
                 <label for="guestName">Name</label>
+
                 <input
                   class="form-control"
                   id="guestName"
@@ -3241,6 +3261,7 @@
 
               <div class="form-group">
                 <label for="guestPhone">Phone</label>
+
                 <input
                   class="form-control"
                   id="guestPhone"
@@ -3254,22 +3275,29 @@
 
               <div class="form-group">
                 <label for="sessionSelect">Session length</label>
+
                 <select
                   class="form-control"
                   id="sessionSelect"
                   name="session"
                   required
                 >
-                  <option value="" selected disabled>Choose a session</option>
+                  <option value="" selected disabled>
+                    Choose a session
+                  </option>
+
                   <option value="30-Minute Session — $40">
                     30-Minute Session — $40
                   </option>
+
                   <option value="45-Minute Session — $50">
                     45-Minute Session — $50
                   </option>
+
                   <option value="60-Minute Session — $60">
                     60-Minute Session — $60
                   </option>
+
                   <option value="90-Minute Session — $100">
                     90-Minute Session — $100
                   </option>
@@ -3278,6 +3306,7 @@
 
               <div class="form-group">
                 <label for="preferredDate">Preferred date</label>
+
                 <input
                   class="form-control"
                   id="preferredDate"
@@ -3289,6 +3318,7 @@
 
               <div class="form-group full">
                 <label for="preferredTime">Preferred time</label>
+
                 <input
                   class="form-control"
                   id="preferredTime"
@@ -3302,6 +3332,7 @@
 
               <div class="form-group full">
                 <label for="guestNote">Notes</label>
+
                 <textarea
                   class="form-control"
                   id="guestNote"
@@ -3311,7 +3342,7 @@
               </div>
             </div>
 
-            <div class="booking-form-footer">
+            <div class="reservation-form-footer">
               <p class="form-note">
                 Submitting does not create a confirmed appointment. Please
                 contact the spa directly for confirmation.
@@ -3319,6 +3350,7 @@
 
               <button class="button button-dark" type="submit">
                 Prepare Request
+
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path
                     d="M5 12h14M13 6l6 6-6 6"
@@ -3343,12 +3375,15 @@
       </div>
     </section>
 
-    <!-- REVIEWS -->
+    <!-- =====================================================
+         REVIEWS
+    ====================================================== -->
     <section class="section reviews" id="reviews">
       <div class="container">
         <div class="reviews-header reveal">
           <div>
             <div class="section-kicker">Guest Impressions</div>
+
             <h2 class="section-heading">
               The details people remember most.
             </h2>
@@ -3366,47 +3401,67 @@
           <div class="marquee-track">
             <div class="review-set">
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “The space felt peaceful from the moment I walked in. It was
                   clean, quiet and never felt rushed.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
-                  “Booking by phone was simple, and the atmosphere was calm
+                  “Scheduling by phone was simple, and the atmosphere was calm
                   without feeling overly formal.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “I appreciated the privacy and the soft, quiet environment. It
                   was exactly the pause I needed.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “Everything looked thoughtfully prepared and tidy. The whole
                   visit had a relaxed, comfortable pace.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “A convenient option when I needed some quiet time after a
                   busy week. The setting was very soothing.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
             </div>
@@ -3414,46 +3469,56 @@
             <div class="review-set" aria-hidden="true">
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “The space felt peaceful from the moment I walked in. It was
                   clean, quiet and never felt rushed.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
-                  “Booking by phone was simple, and the atmosphere was calm
+                  “Scheduling by phone was simple, and the atmosphere was calm
                   without feeling overly formal.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “I appreciated the privacy and the soft, quiet environment. It
                   was exactly the pause I needed.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “Everything looked thoughtfully prepared and tidy. The whole
                   visit had a relaxed, comfortable pace.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “A convenient option when I needed some quiet time after a
                   busy week. The setting was very soothing.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
             </div>
@@ -3464,47 +3529,67 @@
           <div class="marquee-track">
             <div class="review-set">
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “The longer session gave me time to truly settle in. The
                   surroundings stayed quiet and comfortable.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “I liked how simple everything was—from choosing the time to
                   calling and confirming the visit.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “The lighting and warm details made the room feel peaceful.
                   It was a welcome break from a busy day.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “The environment felt private and well maintained. I left
                   feeling calmer and less hurried.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
-                <div class="review-stars" aria-label="Five stars">★★★★★</div>
+                <div class="review-stars" aria-label="Five stars">
+                  ★★★★★
+                </div>
+
                 <blockquote>
                   “A quiet, straightforward experience with a friendly arrival
                   and a clean, restful space.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
             </div>
@@ -3512,46 +3597,56 @@
             <div class="review-set" aria-hidden="true">
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “The longer session gave me time to truly settle in. The
                   surroundings stayed quiet and comfortable.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “I liked how simple everything was—from choosing the time to
                   calling and confirming the visit.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “The lighting and warm details made the room feel peaceful.
                   It was a welcome break from a busy day.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “The environment felt private and well maintained. I left
                   feeling calmer and less hurried.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
 
               <article class="review-card">
                 <div class="review-stars">★★★★★</div>
+
                 <blockquote>
                   “A quiet, straightforward experience with a friendly arrival
                   and a clean, restful space.”
                 </blockquote>
+
                 <footer>Guest impression</footer>
               </article>
             </div>
@@ -3560,12 +3655,17 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- =====================================================
+         FAQ
+    ====================================================== -->
     <section class="section faq" id="faq">
       <div class="container faq-layout">
         <div class="faq-heading-wrap reveal">
           <div class="section-kicker">Helpful Details</div>
-          <h2 class="section-heading">Before your visit.</h2>
+
+          <h2 class="section-heading">
+            Before your visit.
+          </h2>
 
           <p class="section-copy">
             A few simple details can help your appointment begin comfortably
@@ -3582,7 +3682,10 @@
               aria-controls="faq-panel-1"
               id="faq-button-1"
             >
-              <span class="accordion-question">How early should I arrive?</span>
+              <span class="accordion-question">
+                How early should I arrive?
+              </span>
+
               <span class="accordion-icon" aria-hidden="true"></span>
             </button>
 
@@ -3613,6 +3716,7 @@
               <span class="accordion-question">
                 Can I get a massage if I have an injury?
               </span>
+
               <span class="accordion-icon" aria-hidden="true"></span>
             </button>
 
@@ -3625,8 +3729,8 @@
               <div class="accordion-panel-inner">
                 <p>
                   Please speak with a qualified healthcare professional before
-                  booking when you have a recent injury, significant pain,
-                  surgery, medical condition or other concern.
+                  scheduling when you have a recent injury, significant pain,
+                  surgery, medical condition or another health concern.
                 </p>
               </div>
             </div>
@@ -3643,6 +3747,7 @@
               <span class="accordion-question">
                 What is your cancellation policy?
               </span>
+
               <span class="accordion-icon" aria-hidden="true"></span>
             </button>
 
@@ -3669,7 +3774,10 @@
               aria-controls="faq-panel-4"
               id="faq-button-4"
             >
-              <span class="accordion-question">Is there parking available?</span>
+              <span class="accordion-question">
+                Is there parking available?
+              </span>
+
               <span class="accordion-icon" aria-hidden="true"></span>
             </button>
 
@@ -3683,7 +3791,7 @@
                 <p>
                   Parking details and a complete street number were not
                   provided. Please call before your appointment to confirm the
-                  best parking area.
+                  exact entrance and best parking area.
                 </p>
               </div>
             </div>
@@ -3692,12 +3800,15 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
     <section class="section contact" id="contact">
       <div class="container">
         <div class="contact-header reveal">
           <div>
             <div class="section-kicker">Contact & Location</div>
+
             <h2 class="section-heading">
               Your quiet moment is one call away.
             </h2>
@@ -3765,12 +3876,15 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
   <footer class="site-footer">
     <div class="container footer-main">
       <div class="footer-brand">
         <a class="brand" href="#home" aria-label="Return to the top">
           <span class="brand-mark" aria-hidden="true">ZS</span>
+
           <span class="brand-text">
             <span class="brand-name">Zen Spa</span>
             <span class="brand-subtitle">La Mirada, California</span>
@@ -3785,6 +3899,7 @@
 
       <div class="footer-column">
         <h3>Explore</h3>
+
         <div class="footer-links">
           <a href="#about">About</a>
           <a href="#services">Pricing</a>
@@ -3796,6 +3911,7 @@
 
       <div class="footer-column">
         <h3>Contact</h3>
+
         <div class="footer-links">
           <a href="tel:+16264927053">626-492-7053</a>
           <span>9:30 AM – 9:00 PM</span>
@@ -3806,13 +3922,20 @@
     </div>
 
     <div class="container footer-bottom">
-      <span>© <span id="currentYear"></span> Zen Spa. All rights reserved.</span>
-      <span>Quiet comfort · private atmosphere · thoughtful details</span>
+      <span>
+        © <span id="currentYear"></span> Zen Spa. All rights reserved.
+      </span>
+
+      <span>
+        Quiet comfort · private atmosphere · thoughtful details
+      </span>
     </div>
   </footer>
 
   <script>
-    /* Header */
+    /* =========================================================
+       1. HEADER
+    ========================================================= */
     const siteHeader = document.getElementById("siteHeader");
 
     function updateHeader() {
@@ -3820,15 +3943,21 @@
     }
 
     updateHeader();
-    window.addEventListener("scroll", updateHeader, { passive: true });
 
-    /* Mobile navigation */
+    window.addEventListener("scroll", updateHeader, {
+      passive: true
+    });
+
+    /* =========================================================
+       2. MOBILE NAVIGATION
+    ========================================================= */
     const menuToggle = document.getElementById("menuToggle");
     const mobileNav = document.getElementById("mobileNav");
     const mobileLinks = mobileNav.querySelectorAll("a");
 
     function setMobileMenu(open) {
       menuToggle.setAttribute("aria-expanded", String(open));
+
       menuToggle.setAttribute(
         "aria-label",
         open ? "Close navigation menu" : "Open navigation menu"
@@ -3839,12 +3968,16 @@
     }
 
     menuToggle.addEventListener("click", () => {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      const isOpen =
+        menuToggle.getAttribute("aria-expanded") === "true";
+
       setMobileMenu(!isOpen);
     });
 
     mobileLinks.forEach((link) => {
-      link.addEventListener("click", () => setMobileMenu(false));
+      link.addEventListener("click", () => {
+        setMobileMenu(false);
+      });
     });
 
     document.addEventListener("keydown", (event) => {
@@ -3853,22 +3986,37 @@
       }
     });
 
-    /* Hero carousel */
-    const heroSlides = [...document.querySelectorAll(".hero-slide")];
-    const heroDots = [...document.querySelectorAll(".hero-dot")];
+    /* =========================================================
+       3. HERO CAROUSEL
+    ========================================================= */
+    const heroSlides = [
+      ...document.querySelectorAll(".hero-slide")
+    ];
+
+    const heroDots = [
+      ...document.querySelectorAll(".hero-dot")
+    ];
 
     let heroIndex = 0;
     let heroTimer;
 
     function showHeroSlide(index) {
-      heroIndex = (index + heroSlides.length) % heroSlides.length;
+      heroIndex =
+        (index + heroSlides.length) % heroSlides.length;
 
       heroSlides.forEach((slide, slideIndex) => {
-        slide.classList.toggle("active", slideIndex === heroIndex);
+        slide.classList.toggle(
+          "active",
+          slideIndex === heroIndex
+        );
       });
 
       heroDots.forEach((dot, dotIndex) => {
-        dot.classList.toggle("active", dotIndex === heroIndex);
+        dot.classList.toggle(
+          "active",
+          dotIndex === heroIndex
+        );
+
         dot.setAttribute(
           "aria-current",
           dotIndex === heroIndex ? "true" : "false"
@@ -3894,168 +4042,259 @@
     showHeroSlide(0);
     startHeroTimer();
 
-    /* Service image carousels */
-    document.querySelectorAll("[data-carousel]").forEach((carousel, index) => {
-      const slides = [...carousel.querySelectorAll(".mini-carousel-slide")];
-      const previousButton = carousel.querySelector(".carousel-prev");
-      const nextButton = carousel.querySelector(".carousel-next");
+    /* =========================================================
+       4. SERVICE IMAGE CAROUSELS
+    ========================================================= */
+    document
+      .querySelectorAll("[data-carousel]")
+      .forEach((carousel, index) => {
+        const slides = [
+          ...carousel.querySelectorAll(".mini-carousel-slide")
+        ];
 
-      let currentSlide = 0;
-      let autoplayTimer;
+        const previousButton =
+          carousel.querySelector(".carousel-prev");
 
-      function showSlide(newIndex) {
-        currentSlide = (newIndex + slides.length) % slides.length;
+        const nextButton =
+          carousel.querySelector(".carousel-next");
 
-        slides.forEach((slide, slideIndex) => {
-          slide.classList.toggle("active", slideIndex === currentSlide);
-          slide.setAttribute(
-            "aria-hidden",
-            slideIndex === currentSlide ? "false" : "true"
-          );
+        let currentSlide = 0;
+        let autoplayTimer;
+
+        function showSlide(newIndex) {
+          currentSlide =
+            (newIndex + slides.length) % slides.length;
+
+          slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle(
+              "active",
+              slideIndex === currentSlide
+            );
+
+            slide.setAttribute(
+              "aria-hidden",
+              slideIndex === currentSlide ? "false" : "true"
+            );
+          });
+        }
+
+        function startAutoplay() {
+          clearInterval(autoplayTimer);
+
+          autoplayTimer = setInterval(() => {
+            showSlide(currentSlide + 1);
+          }, 4600 + index * 350);
+        }
+
+        previousButton.addEventListener("click", () => {
+          showSlide(currentSlide - 1);
+          startAutoplay();
         });
-      }
 
-      function startAutoplay() {
-        clearInterval(autoplayTimer);
-
-        autoplayTimer = setInterval(() => {
+        nextButton.addEventListener("click", () => {
           showSlide(currentSlide + 1);
-        }, 4600 + index * 350);
-      }
+          startAutoplay();
+        });
 
-      previousButton.addEventListener("click", () => {
-        showSlide(currentSlide - 1);
+        carousel.addEventListener("mouseenter", () => {
+          clearInterval(autoplayTimer);
+        });
+
+        carousel.addEventListener(
+          "mouseleave",
+          startAutoplay
+        );
+
+        carousel.addEventListener("focusin", () => {
+          clearInterval(autoplayTimer);
+        });
+
+        carousel.addEventListener(
+          "focusout",
+          startAutoplay
+        );
+
+        showSlide(0);
         startAutoplay();
       });
 
-      nextButton.addEventListener("click", () => {
-        showSlide(currentSlide + 1);
-        startAutoplay();
+    /* =========================================================
+       5. SESSION SELECTION
+    ========================================================= */
+    const sessionSelect =
+      document.getElementById("sessionSelect");
+
+    document
+      .querySelectorAll("[data-session]")
+      .forEach((link) => {
+        link.addEventListener("click", () => {
+          sessionSelect.value = link.dataset.session;
+        });
       });
 
-      carousel.addEventListener("mouseenter", () => {
-        clearInterval(autoplayTimer);
-      });
-
-      carousel.addEventListener("mouseleave", startAutoplay);
-      carousel.addEventListener("focusin", () => {
-        clearInterval(autoplayTimer);
-      });
-      carousel.addEventListener("focusout", startAutoplay);
-
-      showSlide(0);
-      startAutoplay();
-    });
-
-    /* Session selection */
-    const sessionSelect = document.getElementById("sessionSelect");
-
-    document.querySelectorAll("[data-session]").forEach((link) => {
-      link.addEventListener("click", () => {
-        sessionSelect.value = link.dataset.session;
-      });
-    });
-
-    /* FAQ */
-    const accordionButtons = document.querySelectorAll(".accordion-button");
+    /* =========================================================
+       6. FAQ ACCORDION
+    ========================================================= */
+    const accordionButtons =
+      document.querySelectorAll(".accordion-button");
 
     accordionButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        const panelId = button.getAttribute("aria-controls");
-        const panel = document.getElementById(panelId);
-        const isExpanded = button.getAttribute("aria-expanded") === "true";
+        const panelId =
+          button.getAttribute("aria-controls");
+
+        const panel =
+          document.getElementById(panelId);
+
+        const isExpanded =
+          button.getAttribute("aria-expanded") === "true";
 
         accordionButtons.forEach((otherButton) => {
           const otherPanel = document.getElementById(
             otherButton.getAttribute("aria-controls")
           );
 
-          otherButton.setAttribute("aria-expanded", "false");
+          otherButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
           otherPanel.classList.remove("open");
         });
 
         if (!isExpanded) {
-          button.setAttribute("aria-expanded", "true");
+          button.setAttribute(
+            "aria-expanded",
+            "true"
+          );
+
           panel.classList.add("open");
         }
       });
     });
 
-    /* Booking form */
-    const bookingForm = document.getElementById("bookingForm");
-    const formStatus = document.getElementById("formStatus");
-    const preferredDate = document.getElementById("preferredDate");
+    /* =========================================================
+       7. RESERVATION FORM
+    ========================================================= */
+    const reservationForm =
+      document.getElementById("reservationForm");
+
+    const formStatus =
+      document.getElementById("formStatus");
+
+    const preferredDate =
+      document.getElementById("preferredDate");
 
     const localToday = new Date();
-    const timezoneOffset = localToday.getTimezoneOffset() * 60000;
-    const localDateString = new Date(localToday - timezoneOffset)
+
+    const timezoneOffset =
+      localToday.getTimezoneOffset() * 60000;
+
+    const localDateString = new Date(
+      localToday - timezoneOffset
+    )
       .toISOString()
       .split("T")[0];
 
     preferredDate.min = localDateString;
 
-    bookingForm.addEventListener("submit", (event) => {
-      event.preventDefault();
+    reservationForm.addEventListener(
+      "submit",
+      (event) => {
+        event.preventDefault();
 
-      if (!bookingForm.checkValidity()) {
-        bookingForm.reportValidity();
-        return;
+        if (!reservationForm.checkValidity()) {
+          reservationForm.reportValidity();
+          return;
+        }
+
+        const formData =
+          new FormData(reservationForm);
+
+        const name =
+          formData.get("guestName");
+
+        const session =
+          formData.get("session");
+
+        const date =
+          formData.get("preferredDate");
+
+        const time =
+          formData.get("preferredTime");
+
+        formStatus.innerHTML = `
+          Thank you, <strong>${escapeHTML(name)}</strong>.
+          Your request for the
+          <strong>${escapeHTML(session)}</strong>
+          on <strong>${escapeHTML(date)}</strong>
+          at <strong>${escapeHTML(formatTime(time))}</strong>
+          has been prepared. Please call
+          <a href="tel:+16264927053">
+            <strong>626-492-7053</strong>
+          </a>
+          to confirm the appointment.
+        `;
+
+        formStatus.classList.add("visible");
+
+        formStatus.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest"
+        });
       }
-
-      const formData = new FormData(bookingForm);
-      const name = formData.get("guestName");
-      const session = formData.get("session");
-      const date = formData.get("preferredDate");
-      const time = formData.get("preferredTime");
-
-      formStatus.innerHTML = `
-        Thank you, <strong>${escapeHTML(name)}</strong>. Your request for the
-        <strong>${escapeHTML(session)}</strong> on
-        <strong>${escapeHTML(date)}</strong> at
-        <strong>${escapeHTML(formatTime(time))}</strong> has been prepared.
-        Please call <a href="tel:+16264927053"><strong>626-492-7053</strong></a>
-        to confirm the appointment.
-      `;
-
-      formStatus.classList.add("visible");
-      formStatus.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest"
-      });
-    });
+    );
 
     function formatTime(timeValue) {
-      const [hours, minutes] = timeValue.split(":").map(Number);
-      const suffix = hours >= 12 ? "PM" : "AM";
-      const displayHour = hours % 12 || 12;
+      const [hours, minutes] =
+        timeValue.split(":").map(Number);
 
-      return `${displayHour}:${String(minutes).padStart(2, "0")} ${suffix}`;
+      const suffix =
+        hours >= 12 ? "PM" : "AM";
+
+      const displayHour =
+        hours % 12 || 12;
+
+      return `${displayHour}:${String(minutes).padStart(
+        2,
+        "0"
+      )} ${suffix}`;
     }
 
     function escapeHTML(value) {
-      const temporaryElement = document.createElement("div");
+      const temporaryElement =
+        document.createElement("div");
+
       temporaryElement.textContent = value;
+
       return temporaryElement.innerHTML;
     }
 
-    /* Scroll reveal */
-    const revealElements = document.querySelectorAll(".reveal");
+    /* =========================================================
+       8. SCROLL REVEAL
+    ========================================================= */
+    const revealElements =
+      document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
-      const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.12,
-          rootMargin: "0px 0px -45px 0px"
-        }
-      );
+      const revealObserver =
+        new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add(
+                  "is-visible"
+                );
+
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: "0px 0px -45px 0px"
+          }
+        );
 
       revealElements.forEach((element) => {
         revealObserver.observe(element);
@@ -4066,39 +4305,55 @@
       });
     }
 
-    /* Active navigation */
-    const pageSections = document.querySelectorAll("main section[id]");
-    const desktopNavLinks = document.querySelectorAll(
-      '.desktop-nav a[href^="#"]:not(.nav-cta)'
-    );
+    /* =========================================================
+       9. ACTIVE NAVIGATION
+    ========================================================= */
+    const pageSections =
+      document.querySelectorAll("main section[id]");
+
+    const desktopNavLinks =
+      document.querySelectorAll(
+        '.desktop-nav a[href^="#"]'
+      );
 
     if ("IntersectionObserver" in window) {
-      const navigationObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
+      const navigationObserver =
+        new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) {
+                return;
+              }
 
-            desktopNavLinks.forEach((link) => {
-              const matchesSection =
-                link.getAttribute("href") === `#${entry.target.id}`;
+              desktopNavLinks.forEach((link) => {
+                const matchesSection =
+                  link.getAttribute("href") ===
+                  `#${entry.target.id}`;
 
-              link.classList.toggle("active", matchesSection);
+                link.classList.toggle(
+                  "active",
+                  matchesSection
+                );
+              });
             });
-          });
-        },
-        {
-          rootMargin: "-35% 0px -55% 0px",
-          threshold: 0
-        }
-      );
+          },
+          {
+            rootMargin: "-35% 0px -55% 0px",
+            threshold: 0
+          }
+        );
 
       pageSections.forEach((section) => {
         navigationObserver.observe(section);
       });
     }
 
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
+    /* =========================================================
+       10. CURRENT YEAR
+    ========================================================= */
+    document.getElementById(
+      "currentYear"
+    ).textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
